@@ -18,13 +18,13 @@ class OverviewController
         $breedInfo = $breed['breeds'][0];
 
         return view('overview', [
-            'breedName' => $breedInfo['name'],
-            'temperament' => $breedInfo['temperament'],
-            'origin' => $breedInfo['origin'],
-            'lifeSpan' =>  $breedInfo['life_span'],
-            'bredFor' => $breedInfo['bred_for'],
-            'breedGroup' => $breedInfo['breed_group'],
-            'breedImage' => $breed['url'],
+            'breedName' => (isset($breedInfo['name'])) ? $breedInfo['name'] : '',
+            'temperament' => (isset($breedInfo['temperament'])) ? $breedInfo['temperament'] : null,
+            'origin' => (isset($breedInfo['origin'])) ? $breedInfo['origin'] : null,
+            'lifeSpan' =>  (isset($breedInfo['life_span'])) ? $breedInfo['life_span'] : null,
+            'bredFor' => (isset($breedInfo['bred_for'])) ? $breedInfo['bred_for'] : null,
+            'breedGroup' => (isset($breedInfo['breed_group'])) ? $breedInfo['breed_group'] : null,
+            'breedImage' => (isset($breed['url'])) ? $breed['url'] : null,
         ]);
     }
 
