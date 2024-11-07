@@ -64,6 +64,7 @@ body, html {
     align-items: center;
 }
 
+.typewriter,
 .typewriter span {
     white-space: nowrap;
     overflow: hidden;

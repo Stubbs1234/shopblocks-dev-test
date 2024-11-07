@@ -30,6 +30,7 @@
 </footer>
 
 <script src="{{ asset('js/boostrap5-3.min.js') }}"></script>
+<script src="{{ asset('js/app.js') }}"></script>
 @stack('scripts')
 <script>
     document.addEventListener("DOMContentLoaded", function() {
